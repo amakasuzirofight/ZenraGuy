@@ -47,6 +47,12 @@ namespace Zenra
                 _itemList?.RemoveAt(0);//ItemListがnullだったらRemoveAtを実行しない
                 return temp;
             }
+            public void PlayerKill()
+            {
+                _hp = 0;
+                Debug.Log("死んだ");
+            }
+
             private void SubHp()
             {
                 Debug.Log("Hp減らす");
@@ -58,14 +64,6 @@ namespace Zenra
                 Debug.Log("隠れる");
                 _isHide = false; 
             }
-            //void hoge()
-            //{
-            //    ItemName item = OBON;
-            //}
-            //private int Hoge()
-            //{
-            //    return 10;
-            //}
         }
     }
 }
